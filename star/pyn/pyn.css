@@ -1,0 +1,101 @@
+/*# sourceMappingURL=pyn.css.map */
+
+.gothic-a1-regular {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .gothic-a1-light {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .gothic-a1-bold {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+
+
+
+#hd{
+    background-color: white;
+}
+#gnb,.gnb_1dli,#gnb_1dul{
+    position: unset !important;
+}
+.gnb_1dli{
+    float: unset !important;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+.gnb_1dli .bg{
+    display: none;
+}
+.gnb_1dli:first-child a{
+    color:#a28c5a;
+}
+.gnb_1dli:hover>a{
+    color:#a28c5a !important;
+}
+
+.gnb_2dul_box{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.gnb_1dli:hover>.gnb_2dul{
+    display: flex;
+    height: 150px;
+    width: 100%;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    border-bottom: 1px solid #e0e2e5;
+    z-index: 100;
+}
+
+.pyn_2depth{
+    max-width: 1200px;
+
+}
+
+
+.hd_login {
+    position: absolute;
+    right: 0;
+    top: 45px; 
+}
+#hd_wrapper{
+    height: 100px;
+    position: relative;
+    max-width: 1280px;
+}
+
+
+#logo{
+    float: unset;
+}
+#logo img{
+    width: 200px;
+}
+.hd_sch_wr{
+    display: none;
+}
+
+.hd_login a{
+    color: black;
+}
+
+.usaimg{
+    width: 19px;
+    padding-left: 3px;
+}
