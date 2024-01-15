@@ -9,8 +9,10 @@ if(G5_COMMUNITY_USE === false) {
     return;
 }
 ?>
+<?php if (!defined("_INDEX_")) { ?>
+          </div>
+<? } ?>
 
-    </div>
   
 </div>
 

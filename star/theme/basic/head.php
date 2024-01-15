@@ -74,16 +74,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </div>
         <ul class="hd_login">        
             <?php if ($is_member) {  ?>
-            <!-- <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li> -->
-            <?php if ($is_admin) {  ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/login.php">Login</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/register.php">Language</a><img class="usaimg" src="<?php echo G5_IMG_URL ?>/us_1.png"></li>
-            <?php }  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">logout</a></li>          
+                <?php if ($is_admin) {  ?>
+                 <li><a href="<?php echo G5_URL; ?>/adm">관리자</a></li>           
+                <?php }  ?>
             <?php } else {  ?>
-           
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php">Login</a></li> 
             <?php }  ?>
-
+            <li><a href="<?php echo G5_BBS_URL ?>/register.php">Language</a><img class="usaimg" src="<?php echo G5_IMG_URL ?>/us_1.png"></li>
 
         </ul>
     </div>
@@ -110,15 +108,15 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         if( empty($row2) ) continue; 
 
                         if($k == 0)
-                            echo '<span class="bg">하위분류</span><div class="gnb_2dul"><div class="pyn_2depth container"><ul class="gnb_2dul_box row">'.PHP_EOL;
+                            echo '<span class="bg">하위분류</span><div class="gnb_2dul"><div class="pyn_2depth container row mx-auto"><ul class="gnb_2dul_box row col-6">'.PHP_EOL;
                     ?>
-                        <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
+                        <li class="gnb_2dli col-4"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
                     <?php
                     $k++;
                     }   //end foreach $row2
 
                     if($k > 0)
-                        echo '</ul></div></div>'.PHP_EOL;
+                       echo '</ul><div class="col-3">'.latest("pic_block","noise_ad".$i,1,1000).'</div></div></div>'.PHP_EOL;
                     ?>
                 </li>
                 <?php
@@ -186,8 +184,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <hr>
 
 <!-- 콘텐츠 시작 { -->
-<div id="wrapper">
+    <?php if (!defined("_INDEX_")) { ?> 
+        <div id="wrapper" class="pt-5 mt-5">
+    <? }else{ ?>
+        <div id="wrapper" >
+
+  <?  } ?>
     <div id="container_wr">
-   
-    <div id="container">
-        <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
+    <?php if (!defined("_INDEX_")) { ?> 
+    <div  class="container pt-5 mt-5">
+        <h2 id="container_title mt-5 pt-5"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2>
+        <?php }

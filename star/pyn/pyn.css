@@ -28,11 +28,11 @@
 #gnb,.gnb_1dli,#gnb_1dul{
     position: unset !important;
 }
-.gnb_1dli{
+.gnb_1da{
     float: unset !important;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
     font-size: 0.9rem;
 }
@@ -51,8 +51,8 @@
     margin: 0 auto;
 }
 .gnb_1dli:hover>.gnb_2dul{
-    display: flex;
-    height: 150px;
+    display: block;
+    height: 220px;
     width: 100%;
     opacity: 1;
     position: absolute;
@@ -62,7 +62,12 @@
     border-bottom: 1px solid #e0e2e5;
     z-index: 100;
 }
-
+.gnb_1dli:hover>.gnb_2dul .gnb_2dul_box{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500 !important;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
 .pyn_2depth{
     max-width: 1200px;
 
