@@ -49,6 +49,7 @@
 .gnb_2dul_box{
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 3rem;
 }
 .gnb_1dli:hover>.gnb_2dul{
     display: block;
@@ -70,7 +71,7 @@
 }
 .pyn_2depth{
     max-width: 1200px;
-
+    align-items: start;
 }
 
 
