@@ -126,3 +126,21 @@
     color: #fff !important;
     background-color: #1a544c !important;
 }
+.byul_story{
+    margin-left: 200px;
+    margin-top: 10rem;
+}
+
+.byul_story h2{
+    font-size: 3rem;
+    color: #a28c5a;
+}
+.byul_story h2>span{
+    background-color: #a28c5a;
+    color: white;
+    margin-left: 1rem;
+}
+
+.byul_story .inimg{
+    margin-top: 3rem;
+}

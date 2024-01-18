@@ -24,14 +24,16 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
    
-      <div id=video1 class="video1<?php $bo_table ?>">
-      <?php if($i === 0){?>
-        <div>
+      <div  class="video1<?php $bo_table.$i ?> "  style="float:left; width:100%; ">
+      <?php if($i === $list_count - 1 ){?>
+        <div style="height:0 padding-top:56%; position:realative">
         
-        <iframe width="398" height="397" src="https://www.youtube.com/embed/<?php echo $list[$i]['wr_subject']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe 
+        style = "width: 100%; position: absolute; left:0; right:0; top:0; height:100%;"  
+        src="https://www.youtube.com/embed/<?php echo $list[$i]['wr_subject']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       <?php }else{ ?>
-        <div class="in11">
+        <div class="in11"  >
                 <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
         </div> 
       <?php  } ?>

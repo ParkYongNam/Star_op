@@ -8,9 +8,11 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <div class="section ">
-    <div class="byul_story">        
-        <h2>BYUL<span>Real Story</span></h2>
-              <div class="row">
+    <div class="byul_story"> 
+        <div class="headText">
+            <h2>BYUL<span>Real Story</span></h2>
+        </div>       
+              <div class="row inimg">
                 <div class="col-6">
                     <?php echo latest('pic_bfaf','section_video',9,1000);  ?>
                 </div>
