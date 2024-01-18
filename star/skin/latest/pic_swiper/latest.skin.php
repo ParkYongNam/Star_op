@@ -35,7 +35,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <?php }  ?>
   
     </div> 
-    <div class="swiper-pagination"></div> 
+    <div class="swiper-pagination mb-3"></div> 
 </div>
 
 <script>
@@ -45,11 +45,17 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
        btnnm.push("<?php echo $list[$i]['subject']; ?>");
     <? } ?>
     const swiper<?php echo $bo_table;?> = new Swiper(".byul_swiper<?php echo $bo_table;?>", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".byul_swiper<?php echo $bo_table;?> .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="'+className+' w-auto h-auto border" role="button">' + btnnm[index] + "</span>";
+          return '<span class="'+className+' w-auto h-auto border px-5" role="button">' + btnnm[index] + "</span>";
         },
       },
     });
