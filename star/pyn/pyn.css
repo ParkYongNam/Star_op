@@ -21,7 +21,7 @@
 
 
 
-
+/* Hd */
 #hd{
     background-color: white;
 }
@@ -106,6 +106,10 @@
     padding-left: 3px;
 }
 
+/*Main*/
+.headText{
+    text-align: center;
+}
 .byul_swiperbyul_mainswiper .swiper-wrapper{
     margin-top: 9rem;
 }
@@ -126,10 +130,7 @@
     color: #fff !important;
     background-color: #1a544c !important;
 }
-.byul_story{
-    margin-left: 200px;
-    margin-top: 10rem;
-}
+
 
 .byul_story h2{
     font-size: 3rem;
@@ -143,4 +144,56 @@
 
 .byul_story .inimg{
     margin-top: 3rem;
+}
+
+.section_videoinimgdiv{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.video1:last-child{
+    width: 100% !important;
+    border: 1px solid white;
+}
+
+.byul_swipersection_bfaf .swiper-pagination,
+.byul_swipersection_bfaf2  .swiper-pagination,
+.byul_swipersection_bfaf3  .swiper-pagination{
+    position: unset;
+    margin-top: 1rem;
+} 
+
+.byul_swipersection_bfaf .swiper-pagination-bullet,
+.byul_swipersection_bfaf2  .swiper-pagination-bullet,
+.byul_swipersection_bfaf3  .swiper-pagination-bullet{
+    width: 3.5rem;
+    height: 5px;
+    border-radius: 0 !important;
+}
+.byul_swipersection_bfaf .swiper-pagination-bullet-active,
+.byul_swipersection_bfaf2  .swiper-pagination-bullet-active,
+.byul_swipersection_bfaf3  .swiper-pagination-bullet-active{
+    background-color: black !important;
+}
+
+.section_lastText{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/*Main 2*/
+
+.section_RealSelfie{
+    width: 100%;
+    padding: 5em 0 ;
+    background: #f3f3f3;
+}
+
+.section_RealSelfie h2{
+    margin: 0 0 1em 0;
+    color: #333;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
 }
