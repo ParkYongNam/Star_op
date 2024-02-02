@@ -29,6 +29,9 @@ include_once(G5_THEME_PATH.'/head.php');
    </div>
 <div class="section_RealSelfie">
     <h2>REAL SELFIE</h2>
+    <div>
+        <?php echo latest('pic_real_selfie','section_real_selfie',3,1000); ?>
+    </div>
 </div>
   
 <?php

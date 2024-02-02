@@ -197,3 +197,20 @@
     font-size: 3em;
     font-weight: bold;
 }
+
+.selfie_gnb{
+    /* flex-wrap: wrap;
+    width: 80%; */
+    /* max-width:1280px;
+    margin: 0 auto; */
+}
+.selfie_gnb>li{
+    float: right;
+    width: 20%;
+}
+.selfie_gnb>li>img{
+    width: 100%;
+}
+.selfie_gnb>li:first-child>img{
+    width: 122%;
+}
