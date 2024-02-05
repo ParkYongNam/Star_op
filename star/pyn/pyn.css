@@ -199,10 +199,9 @@
 }
 
 .selfie_gnb{
-    /* flex-wrap: wrap;
-    width: 80%; */
-    /* max-width:1280px;
-    margin: 0 auto; */
+   
+    max-width:1280px;
+    
 }
 .selfie_gnb>li{
     float: right;
@@ -213,4 +212,35 @@
 }
 .selfie_gnb>li:first-child>img{
     width: 122%;
+}
+.section_RealSelfie .swiper-pagination{
+   position: unset;
+   text-align: right;
+   margin-top: 3rem;
+  
+}
+
+
+.section_RealSelfie .swiper-pagination-bullet{
+    width: 1rem;
+    height: 1rem
+}
+
+.section_RealSelfie .swiper-pagination-bullet-active{
+    background-color: black !important;
+}
+
+.section_Review{
+    background: #f5f0d7;
+    padding: 80px 0;
+    width: 1920px;
+}
+/*Main_Review*/
+.reviewText{
+
+    font-size: 19px;
+    font-weight: 700;
+    color: black;
+    
+    text-align: center
 }

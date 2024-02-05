@@ -17,7 +17,7 @@ $board_file_url = G5_DATA_URL . '/file/' . $bo_table;
   }
 </style>
 
-<div class="swiper mySwiper byul_swiper<?php echo $bo_table;?>">
+<div class="swiper mySwiper byul_swiper<?php echo $bo_table;?> container">
   
 <div class="swiper-wrapper ">
     <?php
@@ -39,8 +39,8 @@ $board_file_url = G5_DATA_URL . '/file/' . $bo_table;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div class="swiper-slide mx-auto container ">
-            <ul  class="selfie_gnb ">
+        <div class="swiper-slide">
+            <ul  class="selfie_gnb px-5 mx-5">
               <?php
                $list[$i]['file'] = get_file($bo_table, $list[$i]['wr_id']);
                
@@ -72,7 +72,8 @@ $board_file_url = G5_DATA_URL . '/file/' . $bo_table;
   
     
     const swiper<?php echo $bo_table;?> = new Swiper(".byul_swiper<?php echo $bo_table;?>", {
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 100,
       centeredSlides: true,
       autoplay: {
         delay: 2500,
