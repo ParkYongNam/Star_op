@@ -229,13 +229,13 @@
 .section_RealSelfie .swiper-pagination-bullet-active{
     background-color: black !important;
 }
-
+/*Main_Review*/
 .section_Review{
     background: #f5f0d7;
-    padding: 80px 0;
-    width: 1920px;
+    padding: 5rem 0;
+    width: 100%;
 }
-/*Main_Review*/
+
 .reviewText{
 
     font-size: 19px;
@@ -244,3 +244,4 @@
     
     text-align: center
 }
+

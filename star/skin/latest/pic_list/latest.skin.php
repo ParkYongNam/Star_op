@@ -22,8 +22,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         if( $i === 0 ) {
             $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
 
-            if($thumb['src']) {
-                $img = $thumb['src'];
+            if($thumb['ori']) {
+                $img = $thumb['ori'];
             } else {
                 $img = G5_IMG_URL.'/no_img.png';
                 $thumb['alt'] = '이미지가 없습니다.';

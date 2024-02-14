@@ -33,10 +33,16 @@ include_once(G5_THEME_PATH.'/head.php');
         <?php echo latest('pic_real_selfie','section_real_selfie',3,1000); ?>
     </div>
 </div>
-  <div class="section_Review">
-    <div class="Review_content d-flex container">
-        <div class="Review_img col-6"></div>
-        <div class="reviewText col">
+
+
+  <div class="section_Review ">
+    <div class="Review_content d-flex justify-content-center container ">
+        <div class="Review_img col-6">
+          
+          <?php echo latest('pic_review','Review_img', 2, 1000); ?>
+     
+        </div>
+        <div class="reviewText col-6">
             별성형외과 수술사례자들의
             <br>
             리얼한 수술전/후와 소중한 후기를
@@ -45,11 +51,11 @@ include_once(G5_THEME_PATH.'/head.php');
             <br>
            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/Review_button.jpg" alt=""></a>
        
-          <div>
-
-          </div>
-        </div>
-    </div>
+          
+              <div>
+              </div>
+        </div>     
+    </div>  
   </div>
 <?php
 include_once(G5_THEME_PATH.'/tail.php');
