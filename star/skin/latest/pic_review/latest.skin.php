@@ -73,31 +73,9 @@ for ($i=0; $i<$list_count; $i++) {
                        <div class="twentytwenty-handle" ></div>
                 </div>
             </div>
-            <div class="event-navBtn" >
+            <div class="event-navBtn" data-ex="동적객체로 썸네일생성" >
 
-
-
-            <div  class="event-nav event-nav-active"> <img src="https://byulstar.com/front/images/20200828/1.jpg"></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/2.jpg" /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/3.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/4.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/5.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/6.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/7.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/8.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/9.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/10.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/11.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/12.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/13.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/14.jpg"  /></div>
-            <div  class="event-nav"> <img src="https://byulstar.com/front/images/20200828/15.jpg"  /></div>
-            <div  class="event-nav" > <img src="https://byulstar.com/front/images/20200828/16.jpg"  /></div>
-
-
-
-
-        </div>
+            </div>
         <div class="mini_0" >
         <a href="https://byulstar.com/front/realself/list.php"><img src="https://byulstar.com/front/images/20200828/20200831_but.jpg"></a>
         </div>
@@ -245,40 +223,22 @@ $(function () {
 
     ];
 
+    var eventThumb = "";
 
-   
- 
+    for(var x in baImage){
+        eventThumb +=`<div  class="event-nav" ><img src="${baImage[x][0]}"  /></div>`  
+    }
     
 
-    // var imgTarget = $(".twentytwenty-container").find("img:first").attr("src");
-
-    
+    $(".event-navBtn").html(eventThumb)
 
     $(".event-nav").on("click", function () {
         $(".event-nav").removeClass("event-nav-active")
-        $(this).addClass("event-nav-active")
-       
+        $(this).addClass("event-nav-active")   
         
         $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[$(this).index()][0]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[$(this).index()][1]);
-        
+        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[$(this).index()][1]);        
     });
-
-
-  
-
-    
-
-
-   
-    
-      
-    
-
-   
-
-
-
 
 })
 </script>
