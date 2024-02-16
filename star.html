@@ -19,7 +19,212 @@
 
 
 <link href="https://byulstar.com/20190425_index/images4/20190531_nana/img_up/shop_pds/nanaprs/design/img/test/css/twentytwenty2.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://byulstar.com/20190425_index/images4/20190531_nana/img_up/shop_pds/nanaprs/design/img/test/css/ba-eventstyle0.css">
+<!-- <link rel="stylesheet" href="https://byulstar.com/20190425_index/images4/20190531_nana/img_up/shop_pds/nanaprs/design/img/test/css/ba-eventstyle0.css"> -->
+
+<style>
+
+.center{
+    text-align: center;
+}
+
+.ba-container {
+    width:100%;
+    height: 600px;
+    background: #f1f1f1;
+    padding: 2px 0 6px 0;
+}
+.evnetPage-wrap {
+    max-width:1064px;
+    margin: 0 auto;
+    position: relative;
+	margin-left: 26px;
+	top: -39px;
+
+}
+    .ba-wrap {
+    width:376px;
+    height:435px;
+    /*background: #fff;*/
+    margin: 0px auto;
+    position: relative;
+	margin-top: 126px;
+}
+
+
+
+.event-navBtn{
+    text-align: center;
+}
+.event-nav {
+    
+    transition: .3s;
+    cursor: pointer;
+}
+
+.event-nav img{
+    width: 97px;
+    height: 113px;
+    
+    /*border-radius: 100px;*/
+    float: left;
+    /*margin: 25px 3px;*/
+	margin: 2px 2px 0px 0px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.event-nav-active {
+	background-color: #a89a6d;
+        opacity: 0.3;
+    /*width:27px;*/
+   
+    cursor: default;
+	
+}
+
+
+
+
+
+
+/***********BEFORE AFTER ***************/
+
+
+
+
+
+
+
+
+
+
+.event-container {
+    padding: 100px 0;
+    background: #f2f2f4;
+}
+
+.event-title {
+    text-align: left;
+    font-size: 45px;
+    line-height: 55px;
+    color: #333;
+    padding-bottom: 50px;
+    display: inline-block;
+}
+
+.event-rec-top {
+    text-align: left;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.arrow-leftbtn {
+    position: absolute;
+    right: 90px;
+    bottom: 50px;
+}
+.arrow-rightbtn {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}
+.arrow-btn img:last-child {
+    margin-left: 20px;
+}
+
+
+.event-carousel {
+    position: relative;
+    width:100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.event-carousel ul {
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.event-carousel ul li {
+    width:280px; 
+    height:400px;
+    display:inline-block;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    transition: .3s all;
+}
+.event-carousel ul li:hover {
+    background: #333;
+    transition: .3s all;
+}
+.event-carousel ul li:hover .carousel-title{
+    color:#fff;
+}
+
+
+.carousel-title{
+    font-size: 20px;
+    color: #333;
+    line-height: 25px;
+    padding: 55px 0 30px 20px;
+    text-align: left;
+}
+.event-carousel ul li:nth-child(2){
+    left: 300;
+}
+.event-carousel ul li:nth-child(3){
+    left: 600;
+}
+.event-carousel ul li:nth-child(4){
+    left: 900;
+}
+.event-carousel ul li:nth-child(5){
+    left: 1200;
+}
+
+
+
+
+
+
+
+
+.event-rec {
+    width:280px;
+    height: 400px;
+    background: #fff;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .3s ease;
+    text-align: center;
+    
+}
+.event-rec img {
+    transition: 1s ease;
+}
+.event-rec:hover {
+    background: #333;
+    color: #fff;
+    transition: .3s ease;
+}
+
+
+
+
+
+.event-rec-title {
+    font-family: SourceHanSansK;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    padding: 50px 0 29px 19px;
+    line-height: 30px;
+}
+</style>
 
 
 <!-- Event Carouselr Content BEGIN-->
@@ -34,10 +239,13 @@
 
 
 
-        <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="twentytwenty-container" style="height:600px">
-          <img src="https://byulstar.com/front/images/20200828/1.jpg" class="twentytwenty-before" style="clip: rect(0px, 177.156px, 364px, 0px);">
-          <img src="https://byulstar.com/front/images/20200828/1_1.jpg" class="twentytwenty-after" style="clip: rect(0px, 317px, 364px, 177.156px);">
-        <div class="twentytwenty-handle" ></div></div></div>
+        <div class="twentytwenty-wrapper twentytwenty-horizontal">
+            <div class="twentytwenty-container" style="height:600px">
+                <img src="https://byulstar.com/front/images/20200828/1.jpg" class="twentytwenty-before" style="clip: rect(0px, 177.156px, 364px, 0px);">
+                <img src="https://byulstar.com/front/images/20200828/1_1.jpg" class="twentytwenty-after" style="clip: rect(0px, 317px, 364px, 177.156px);">
+                <div class="twentytwenty-handle" ></div>
+            </div>
+        </div>
       </div>
     </div>
 </div>
@@ -197,38 +405,38 @@ $(function () {
 
 
     var baImage = [
-        "https://byulstar.com/front/images/20200828/1.jpg",
-        "https://byulstar.com/front/images/20200828/1_1.jpg",
-        "https://byulstar.com/front/images/20200828/2.jpg",
-        "https://byulstar.com/front/images/20200828/2_1.jpg",
-        "https://byulstar.com/front/images/20200828/3.jpg",
-        "https://byulstar.com/front/images/20200828/3_1.jpg",
-        "https://byulstar.com/front/images/20200828/4.jpg",
-        "https://byulstar.com/front/images/20200828/4_1.jpg",
-        "https://byulstar.com/front/images/20200828/5.jpg",
-        "https://byulstar.com/front/images/20200828/5_1.jpg",
-        "https://byulstar.com/front/images/20200828/6.jpg",
-        "https://byulstar.com/front/images/20200828/6_1.jpg",
-        "https://byulstar.com/front/images/20200828/7.jpg",
-        "https://byulstar.com/front/images/20200828/7_1.jpg",
-        "https://byulstar.com/front/images/20200828/8.jpg",
-        "https://byulstar.com/front/images/20200828/8_1.jpg",
-        "https://byulstar.com/front/images/20200828/9.jpg",
-        "https://byulstar.com/front/images/20200828/9_1.jpg",
-        "https://byulstar.com/front/images/20200828/10.jpg",
-        "https://byulstar.com/front/images/20200828/10_1.jpg",
-        "https://byulstar.com/front/images/20200828/11.jpg",
-        "https://byulstar.com/front/images/20200828/11_1.jpg",
-        "https://byulstar.com/front/images/20200828/12.jpg",
-        "https://byulstar.com/front/images/20200828/12_1.jpg",
-        "https://byulstar.com/front/images/20200828/13.jpg",
-        "https://byulstar.com/front/images/20200828/13_1.jpg",
-        "https://byulstar.com/front/images/20200828/14.jpg",
-        "https://byulstar.com/front/images/20200828/14_1.jpg",
-        "https://byulstar.com/front/images/20200828/15.jpg",
-        "https://byulstar.com/front/images/20200828/15_1.jpg",
-        "https://byulstar.com/front/images/20200828/16.jpg",
-        "https://byulstar.com/front/images/20200828/16_1.jpg"
+        ["https://byulstar.com/front/images/20200828/1.jpg",
+        "https://byulstar.com/front/images/20200828/1_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/2.jpg",
+        "https://byulstar.com/front/images/20200828/2_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/3.jpg",
+        "https://byulstar.com/front/images/20200828/3_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/4.jpg",
+        "https://byulstar.com/front/images/20200828/4_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/5.jpg",
+        "https://byulstar.com/front/images/20200828/5_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/6.jpg",
+        "https://byulstar.com/front/images/20200828/6_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/7.jpg",
+        "https://byulstar.com/front/images/20200828/7_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/8.jpg",
+        "https://byulstar.com/front/images/20200828/8_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/9.jpg",
+        "https://byulstar.com/front/images/20200828/9_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/10.jpg",
+        "https://byulstar.com/front/images/20200828/10_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/11.jpg",
+        "https://byulstar.com/front/images/20200828/11_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/12.jpg",
+        "https://byulstar.com/front/images/20200828/12_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/13.jpg",
+        "https://byulstar.com/front/images/20200828/13_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/14.jpg",
+        "https://byulstar.com/front/images/20200828/14_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/15.jpg",
+        "https://byulstar.com/front/images/20200828/15_1.jpg"],
+        ["https://byulstar.com/front/images/20200828/16.jpg",
+        "https://byulstar.com/front/images/20200828/16_1.jpg"]
 
     ];
 
@@ -239,85 +447,14 @@ $(function () {
     
       
     
-  
-      
+ for( var i = 0; i <baImage.length; i++) {     
    
-    $(".event-nav").eq(0).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[0]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[1]);
+    $(".event-nav").eq(i).on("click", function() {
+        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[i][0]);
+        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[i][1]);
     })
-
-    $(".event-nav").eq(1).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[2]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[3]);
-    })
-
-    $(".event-nav").eq(2).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[4]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[5]);
-    })
-
-    $(".event-nav").eq(3).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[6]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[7]);
-    })
-    $(".event-nav").eq(4).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[8]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[9]);
-    })
-    $(".event-nav").eq(5).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[10]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[11]);
-    })
-    $(".event-nav").eq(6).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[12]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[13]);
-    })
-
-    $(".event-nav").eq(7).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[14]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[15]);
-    })
-
-    $(".event-nav").eq(8).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[16]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[17]);
-    })
-
-    $(".event-nav").eq(9).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[18]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[19]);
-    })
-
-    $(".event-nav").eq(10).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[20]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[21]);
-    })
-
-    $(".event-nav").eq(11).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[22]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[23]);
-    })
-
-    $(".event-nav").eq(12).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[24]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[25]);
-    })
-    $(".event-nav").eq(13).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[26]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[27]);
-    })
-
-     $(".event-nav").eq(14).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[28]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[29]);
-    })
-
-     $(".event-nav").eq(15).on("click", function() {
-        $(".twentytwenty-container").find(".twentytwenty-before").attr("src", baImage[30]);
-        $(".twentytwenty-container").find(".twentytwenty-after").attr("src", baImage[31]);
-    	
-    })
+ }
+   
 
 
 
