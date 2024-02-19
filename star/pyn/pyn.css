@@ -235,7 +235,9 @@
     padding: 5rem 0;
     width: 100%;
 }
-
+.Review_img{
+    min-width: 1200px;
+}
 .reviewText{
 
     font-size: 19px;
@@ -244,4 +246,6 @@
     
     text-align: center
 }
-
+.review_img .twentytwenty-container>img{
+    width: 100% !important;
+}

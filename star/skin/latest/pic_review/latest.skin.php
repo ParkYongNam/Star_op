@@ -15,17 +15,17 @@ $board_file_url = G5_DATA_URL . '/file/' . $bo_table;
 ?>
 
 <div class ="review_img">
-    <div class="ba-wrap " style="height:435px;">
-         <div class="row">
+    <div class="wrap " style="height:435px;">
+         <div class="low">
              <div class="large-8 columns">
-                 <div class="twentytwenty-wrapper twentytwenty-horizontal">
-                     <div class="twentytwenty-container" style="height:600px">
+                 <div class="twentytwenty-wrapper twentytwenty-horizontal" style="display:flex; justify-content:center; align-items:center;">
+                     <div class="twentytwenty-container" style="height:490px; width:400px; padding-right:5rem">
 
         <?php
 
   
 
-for ($i=0; $i<$list_count; $i++) {
+for ($i=0; $i<1; $i++) {
     
     $img_link_html = '';
     
@@ -52,18 +52,19 @@ for ($i=0; $i<$list_count; $i++) {
              <img src="<?php
            echo $board_file_url . "/" . thumbnail($list[$i]['file'][$j]['file'], $board_file_path, $board_file_path, $thumb_width,'', false,true);
            ?>"  class='<?php echo $j === 0 ? "twentytwenty-before" : "twentytwenty-after" ?>' 
-           style="<?php echo $j === 0 ? 'clip: rect(0px, 177.156px, 364px, 0px)' : 'clip: rect(0px, 317px, 364px, 177.156px)' ?>" >
+           style="<?php echo $j === 0 ? 'clip: rect(0px, 177.156px, 364px, 0px)' : 'clip: rect(0px, 317px, 364px, 177.156px)' ?> " >
           
            <?php
            }
           
          }
+        }
    
 ?>
         
 
 
-  <?php }  ?>
+ 
 
   
 
@@ -72,17 +73,23 @@ for ($i=0; $i<$list_count; $i++) {
 
                        <div class="twentytwenty-handle" ></div>
                 </div>
-            </div>
-            <div class="event-navBtn" data-ex="동적객체로 썸네일생성" >
-
-            </div>
-        <div class="mini_0" >
-        <a href="https://byulstar.com/front/realself/list.php"><img src="https://byulstar.com/front/images/20200828/20200831_but.jpg"></a>
-        </div>
+                <div class="flex-grow-1" style="max-width:600px;">
+                    <div style="margin-bottom:1rem;">
+                        <div class="wr_content" style="font-size:19px; text-align:center; font-weight:700;"><?php echo $list[$i]['wr_content']; ?></div>
+                        <div class="mini_0" style="text-align: center;" >
+                            <a href="https://byulstar.com/front/realself/list.php">
+                                  <img src="<?php echo G5_IMG_URL ?>/Review_button.jpg" alt="">
+                         </a>
+                        </div>
+                    </div> 
+                    <div class="event-navBtn" data-ex="동적객체로 썸네일생성" > </div>
+               </div>
+       
       </div> <!--row-->
         
     </div>
 </div>
+
 
 
     <script src="<?php echo G5_URL;?>/twentytwenty2/js/jquery.event.move.js"></script>
@@ -188,40 +195,40 @@ $(function () {
     });
 
     var baImage = [
-        ["https://byulstar.com/front/images/20200828/1.jpg",
-        "https://byulstar.com/front/images/20200828/1_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/2.jpg",
-        "https://byulstar.com/front/images/20200828/2_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/3.jpg",
-        "https://byulstar.com/front/images/20200828/3_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/4.jpg",
-        "https://byulstar.com/front/images/20200828/4_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/5.jpg",
-        "https://byulstar.com/front/images/20200828/5_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/6.jpg",
-        "https://byulstar.com/front/images/20200828/6_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/7.jpg",
-        "https://byulstar.com/front/images/20200828/7_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/8.jpg",
-        "https://byulstar.com/front/images/20200828/8_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/9.jpg",
-        "https://byulstar.com/front/images/20200828/9_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/10.jpg",
-        "https://byulstar.com/front/images/20200828/10_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/11.jpg",
-        "https://byulstar.com/front/images/20200828/11_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/12.jpg",
-        "https://byulstar.com/front/images/20200828/12_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/13.jpg",
-        "https://byulstar.com/front/images/20200828/13_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/14.jpg",
-        "https://byulstar.com/front/images/20200828/14_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/15.jpg",
-        "https://byulstar.com/front/images/20200828/15_1.jpg"],
-        ["https://byulstar.com/front/images/20200828/16.jpg",
-        "https://byulstar.com/front/images/20200828/16_1.jpg"]
+    <?php 
+        for ($i = 0; $i < $list_count; $i++) {
+            $thumbs = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
+            if ($thumbs['ori']) {
+                $img = $thumbs['ori'];
+            } else {
+                $imgs = G5_IMG_URL.'/no_img.png';
+                $thumbs['alt'] = '이미지가 없습니다.';
+            }
 
-    ];
+            $list[$i]['file'] = get_file($bo_table, $list[$i]['wr_id']); // 첨부파일들
+            
+            // Initialize an empty array to store thumbnails for the current item
+            $thumbnailArray = [];
+
+            for ($t = 0; $t < count($list[$i]['file']); $t++) {
+                $tarray = thumbnail($list[$i]['file'][$t]['file'], $board_file_path, $board_file_path, $thumb_width,'', false,true);
+                if (!empty($tarray)) {
+                    // Add the thumbnail URL to the array
+                    $thumbnailArray[] = $board_file_url . "/" . thumbnail($list[$i]['file'][$t]['file'], $board_file_path, $board_file_path, $thumb_width,'', false,true);
+                }
+            }
+
+            // Output the array of thumbnails for the current item
+            echo json_encode($thumbnailArray);
+
+            // Add a comma if this is not the last item
+            if ($i < $list_count - 1) {
+                echo ",";
+            }
+        }
+    ?>
+];
+
 
     var eventThumb = "";
 
