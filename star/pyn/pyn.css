@@ -249,3 +249,9 @@
 .review_img .twentytwenty-container>img{
     width: 100% !important;
 }
+/*section_youtube*/
+.video_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
