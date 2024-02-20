@@ -252,6 +252,18 @@
 /*section_youtube*/
 .video_wrap{
     width: 1200px;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
+}
+.video_wrap .swiper-button-next::after{
+    content: '\F133';
+    font-family: 'bootstrap-icons';
+    font-size: 40px;
+    color: palevioletred;
+   
+} 
+.video_wrap .swiper-button-prev::after{
+    content:'\F129';
+    font-family: 'bootstrap-icons';
+    font-size: 40px;
+    color: palevioletred;
 }

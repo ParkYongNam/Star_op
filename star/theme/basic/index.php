@@ -48,8 +48,11 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <div class="youtube_section">
-    <div class="video_wrap">
+    <div class="video_wrap mb-3">
       <?php echo latest('pic_youtube_swiper','youtube_section',2,1000); ?>
+    </div>
+    <div class="video_wrap">
+    <?php echo latest('pic_youtube_swiper2','youtube_section2',2,1000);?>
     </div>
 
 </div>
