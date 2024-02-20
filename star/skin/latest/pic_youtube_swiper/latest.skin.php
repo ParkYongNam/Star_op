@@ -35,10 +35,15 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div class="swiper-slide">  
-          <div style="height:0; padding-top:80%; position:relative; ">
-              <iframe width="100%" height="100%" class="position-absolute" style="top:0; left:0; right:0;" src="https://www.youtube.com/embed/<?php echo $list[$i]['subject']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="swiper-slide d-flex">  
+          <?php 
+           $subjectarr =  explode( '/', $list[$i]['subject'] );
+          
+          for($j=0; $j< count($subjectarr); $j++){?>
+          <div class="col-md-3">
+              <iframe  width="100%" src="https://www.youtube.com/embed/<?php echo $subjectarr[$j]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
+          <?php } ?>
         </div>
  
     <?php }  ?>
@@ -54,7 +59,6 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
   
     const swiper<?php echo $bo_table;?> = new Swiper(".byul_swiper<?php echo $bo_table;?>", {
       spaceBetween: 30,
-      slidesPerView: 4,
       navigation: {
     nextEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-next',
     prevEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-prev',

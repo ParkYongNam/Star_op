@@ -35,7 +35,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 
-  <div class="section_Review ">
+  <div class="section_Review mb-3">
     <div class="Review_content  ">
         <div class="Review_img">
           
@@ -49,7 +49,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div class="youtube_section">
     <div class="video_wrap">
-      <?php echo latest('pic_youtube_swiper','youtube_section',8,1000); ?>
+      <?php echo latest('pic_youtube_swiper','youtube_section',2,1000); ?>
     </div>
 
 </div>
