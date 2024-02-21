@@ -401,3 +401,17 @@
     font-weight: bold;
     line-height: 15px;
 }
+
+/*section_qm*/
+#section_qm{
+    position: fixed;
+    right: -300px;
+    height: 795px;   
+    z-index: 999;
+    overflow: hidden;
+    top: 62px;
+}
+.section_qm_list{
+    height: 100%;
+    float: left;
+}

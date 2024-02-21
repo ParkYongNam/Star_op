@@ -46,16 +46,16 @@ if(G5_COMMUNITY_USE === false) {
                 </p>
             </div>
             <div class="sns d-flex justify-content-center align-items-center my-3">
-                <a href="https://www.youtube.com/channel/UCAsblskymKlJbX9cMBVDS_A">
+                <a target="_blank" href="https://www.youtube.com/channel/UCAsblskymKlJbX9cMBVDS_A">
                 <i class="bi bi-youtube"></i>
                 </a>
-                <a href="https://www.facebook.com/byulstar11">
+                <a target="_blank" href="https://www.facebook.com/byulstar11">
                 <i class="bi bi-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/byulstagrambb/">
+                <a target="_blank" href="https://www.instagram.com/byulstagrambb/">
                 <i class="bi bi-instagram"></i>
                 </a>
-                <a href="https://twitter.com/rjktldxcv0wfrjs" target="_blank">
+                <a target="_blank" href="https://twitter.com/rjktldxcv0wfrjs" target="_blank">
                 <i class="bi bi-twitter"></i>
                 </a>
             </div>
@@ -104,6 +104,10 @@ if(G5_COMMUNITY_USE === false) {
        
         
     </div>
+</div>
+<div>
+    <?php echo latest('pic_qm','section_qm',7,1000); ?>
+</div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1a6166fbd95b992c649edda75561c5d5"></script>
     <script>
 		var mapContainer = document.getElementById('map'),
