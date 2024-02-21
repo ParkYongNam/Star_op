@@ -22,43 +22,106 @@ if(G5_COMMUNITY_USE === false) {
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft">
+<div id="ft" class="col-12">
+    <div class="sitemap d-flex justify-content-center align-items-center">
+        <div class="footer_cont2 col-3  px-5">
+            <div class="row">
+                <a href="<?php echo G5_URL ?>" class="ftlogo">
+                    <img src="<?php echo G5_IMG_URL ?>/logo.png" alt="<?php echo $config['cf_title']; ?>">
+                </a>
+            </div>
+            <div class="txt row">
+                <p class="p-1">
+                    <strong>별성형외과의원</strong>
+                </p>
+                <p class="fz-12">
+                서울시 서초구 강남대로 441 7~8F(서초동 1305 서산빌딩)<br>
+                대표자: 고국진,백형익 | 사업자등록번호: 657-25-00094<br>
+                대표번호:<strong>02-1833-8898</strong>						
+                </p>
+            </div>
+            <div class="copyright row my-3">
+                <p class="fz-11">
+                Copyright © 2019 별성형외과의원. All Rights Reserved.
+                </p>
+            </div>
+            <div class="sns d-flex justify-content-center align-items-center my-3">
+                <a href="https://www.youtube.com/channel/UCAsblskymKlJbX9cMBVDS_A">
+                <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/byulstar11">
+                <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/byulstagrambb/">
+                <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://twitter.com/rjktldxcv0wfrjs" target="_blank">
+                <i class="bi bi-twitter"></i>
+                </a>
+            </div>
+            <div class="personal d-flex justify-content-center align-items-center">
+                <a href="#">
+                    별성형외과소개
+                </a>
+                <a href="#">
+                    오시는길
+                </a>
+                <a href="#">
+                    비급여수가표
+                </a>
 
-    <div id="ft_wr">
-        <div id="ft_link" class="ft_cnt">
-            <a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a>
-            <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">개인정보처리방침</a>
-            <a href="<?php echo get_pretty_url('content', 'provision'); ?>">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
+            </div>
         </div>
-        <div id="ft_company" class="ft_cnt">
-        	<h2>사이트 정보</h2>
-	        <p class="ft_info">
-	        	회사명 : 회사명 / 대표 : 대표자명<br>
-				주소  : OO도 OO시 OO구 OO동 123-45<br>
-				사업자 등록번호  : 123-45-67890<br>
-				전화 :  02-123-4567  팩스  : 02-123-4568<br>
-				통신판매업신고번호 :  제 OO구 - 123호<br>
-				개인정보관리책임자 :  정보책임자명<br>
-			</p>
-	    </div>
-        <?php
-        //공지사항
-        // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
-        // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
-        // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-        echo latest('theme/notice', 'notice', 4, 13);
-        ?>
+        <div style="width: 846px;height: 288px;  color: #333;">
+            <div id="map" style="width:846px;height:256px;">
+
+            </div>
+            <div class="mapdsc d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                     <a target="_blank" href="https://map.kakao.com/">
+                        <img src="<?php echo G5_IMG_URL ?>/logo_kakaomap.png" alt="">
+                    </a>
+                </div>
+                <div class="fz-11">
+                        <p> 강남역 10번 출구 350m 직진 / 신논현역 6번 출구 250m 직진, 시코르 건물 7층</p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <a target="_blank" href="https://map.kakao.com/?from=roughmap&srcid=27278153&confirmid=27278153&q=%EB%B3%84%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC%EC%9D%98%EC%9B%90&rv=on">
+                        로드뷰
+                    </a>
+                    <span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span>
+                    <a target="_blank" href="https://map.kakao.com/?from=roughmap&eName=%EB%B3%84%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC%EC%9D%98%EC%9B%90&eX=505599.0&eY=1111739.0">
+                        길찾기
+                    </a>
+                    <span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span>
+                    <a target="_blank" href="https://map.kakao.com/?map_type=TYPE_MAP&from=roughmap&srcid=27278153&itemId=27278153&q=%EB%B3%84%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC%EC%9D%98%EC%9B%90&urlX=505599.0&urlY=1111739.0/">
+                        지도크게보기
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+       
         
-		<?php echo visit('theme/basic'); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-	</div>      
-        <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
-    
-    
-    <button type="button" id="top_btn">
-    	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
-    </button>
+    </div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1a6166fbd95b992c649edda75561c5d5"></script>
+    <script>
+		var mapContainer = document.getElementById('map'),
+		mapOption = { 
+        center: new kakao.maps.LatLng(37.50175763119219, 127.0253637691466),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+        var marker = new kakao.maps.Marker({ 
+    // 지도 중심좌표에 마커를 생성합니다 
+        position: map.getCenter() 
+        }); 
+// 지도에 마커를 표시합니다
+        marker.setMap(map);
+	</script>
+
+       
     <script>
     $(function() {
         $("#top_btn").on("click", function() {
