@@ -2,7 +2,7 @@
 DB 정보
 DB 아이디 :dkskcka1,
 
-DB 패스워드 : dydrkf0802@
+DB 패스워드 : ***********
 
 DB 접두어 : star_
 
@@ -33,4 +33,4 @@ ftp 정보
 
 개발 툴 : vscode, 피그마 , 포토샵 ,일러스트
 
-피그마:https://www.figma.com/file/yPE51HDZdOs3dqOIrKVnab/Untitled?type=design&mode=design&t=weut7nJ4vSyG5yC5-0
+피그마:https://www.figma.com/file/yPE51HDZdOs3dqOIrKVnab/Untitled?type=design&node-id=9-2&mode=design&t=Lq48Copdm6J5CVU9-0
