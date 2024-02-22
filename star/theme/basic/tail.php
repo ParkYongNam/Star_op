@@ -105,7 +105,7 @@ if(G5_COMMUNITY_USE === false) {
         
     </div>
 </div>
-<div>
+<div id="qm">
     <?php echo latest('pic_qm','section_qm',7,1000); ?>
 </div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1a6166fbd95b992c649edda75561c5d5"></script>

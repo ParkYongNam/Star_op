@@ -403,15 +403,23 @@
 }
 
 /*section_qm*/
-#section_qm{
+#qm .sec_qm{
     position: fixed;
-    right: -300px;
-    height: 795px;   
-    z-index: 999;
+    right: 0;
+    width: 95px;
+    
+    z-index: 999999;
     overflow: hidden;
     top: 62px;
 }
-.section_qm_list{
+#qm .section_qm_list{
     height: 100%;
-    float: left;
+    width: 100%;
+}
+#qm .section_qm_list li{
+    text-align: center;
+    font-size: 12px;
+}
+#qm .section_qm_list li img{
+    width: 100%;
 }
