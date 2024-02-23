@@ -406,8 +406,7 @@
 #qm .sec_qm{
     position: fixed;
     right: 0;
-    width: 95px;
-    
+    width: 95px; 
     z-index: 999999;
     overflow: hidden;
     top: 62px;
@@ -422,4 +421,5 @@
 }
 #qm .section_qm_list li img{
     width: 100%;
+   
 }

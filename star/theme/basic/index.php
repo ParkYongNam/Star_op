@@ -59,42 +59,60 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div id="section_qc">
 <div class="quick_consult_top"></div>
-  <div class="quick_consult">
-      <form id="qcf" action="#" method="post">
+  <div class="quick_consult col-lg-6 col-md-10 mx-auto">
+
+      <form id="qcf" action="<?php echo G5_BBS_URL;?>/write_update.php" method="post"  onsubmit="return checkFrm(this);">
+      <input type=hidden   name=w        value="">
+         <input type="hidden" name="token" value="<?php echo get_write_token('myform'); ?>"> 
+         <!-- myform 게시판명 -->
+        <input type=hidden name=bo_table value="myform">
+         <input type=hidden name=wr_id    value="">
+         <input type=hidden name=sca      value="">
+         <input type=hidden name=sfl      value="">
+         <input type=hidden name=stx      value="">
+         <input type=hidden name=spt      value="">
+         <input type=hidden name=sst      value="">
+         <input type=hidden name=sod      value="">
+
+         <input type=hidden name=wr_subject  value="빠른 상담 신청">
+        <input type=hidden name=wr_content  value="빠른 상담 신청">
+
+
         <div class="inner d-flex ">
           <ul>
             <li class="qce_qc2 d-flex align-items-center">
               <label>
-                <input type="text" name="qc_name" id="qc_name" placeholder="이름">
+                <input type="text" name="wr_name" id="qc_name" placeholder="이름">
               </label>
             </li>
             <li class="qce_qc3 d-flex align-items-center mx-5">
                 <label style="padding-left:0.5rem;">
-                  <input type="text" name="qc_tel" id="qc_tel" _onkeypress="return numkeyCheck(event)">
+                  <input type="text" name="wr_1" id="qc_tel" _onkeypress="return numkeyCheck(event)">
                 </label>
             </li>
             <li class="qce_qc1">
               <label>
-                <input type="radio" name="qc_type" vaule="phone" checked></input>
+                <input type="radio" name="wr_2" vaule="phone" checked></input>
                 "전화상담"
               </label>
               <label>
-                <input type="radio" name="qc_type" vaule="kakao"></input>
+                <input type="radio" name="wr_2" vaule="kakao"></input>
                 "카톡상담"
               </label>
               <p class="qc_agree">
                 <label>
-                  <input type="checkbox" vaule="check" name="check" checked id="qc_agree"></input>
+                  <input type="checkbox" vaule="check"  name="wr_6" require  id="qc_agree"></input>
                   "개인정보취급방침에 동의합니다."
                 </label>
               </p>
             </li>
           </ul>
-          <a href="#" class="btn mx-3">
+          <button type="submit" class="btn mx-3" >
             <span style="color:#fff;">상담요청</span>
-          </a>
+</button>
         </div>
       </form>
+
   </div>
 
 </div>
@@ -130,6 +148,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 });
+</script>
+<script type="text/javascript">
+      
+      function checkFrm(obj) {
+         if(obj.wr_6.checked == false) {
+            alert('개인정보 활동동의에 체크해주세요.');
+            obj.wr_6.focus();
+            return false;
+         }
+      }
+
+
 </script>
 <?php
 include_once(G5_THEME_PATH.'/tail.php');

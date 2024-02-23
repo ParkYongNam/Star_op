@@ -73,7 +73,7 @@ for ($i=0; $i<1; $i++) {
 
                        <div class="twentytwenty-handle" ></div>
                 </div>
-                <div class="flex-grow-1" style="max-width:600px;">
+                <div class="flex-grow-1" style="max-width:800px;">
                     <div style="margin-bottom:1rem;">
                         <div class="wr_content" style="font-size:19px; text-align:center; font-weight:700;"><?php echo $list[$i]['wr_content']; ?></div>
                         <div class="mini_0" style="text-align: center;" >

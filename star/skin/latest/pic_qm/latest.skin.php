@@ -36,6 +36,19 @@ $board_file_url = G5_DATA_URL . '/file/' . $bo_table;
            </a>
         </li>
     <?php }  ?>
+        <li id="topbtn" onclick="topBtn();" style="margin-top:0px; cursor: pointer;">
+        
+            <img src="<?php echo G5_IMG_URL ?>/2022_top.png" alt="">
+        
+        </li>    
     </ul>
   
 </div>
+<script>
+   const $topBtn = document.querySelector("#topbtn");
+
+// li id=top onclick시 상단으로 이동
+$topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });  
+}
+</script>
