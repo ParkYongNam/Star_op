@@ -15,7 +15,7 @@ ftp 정보
     "protocol": "ftp",
     "port": 21,
     "username": "dkskcka1",
-    "password": "qkrdydska0623!!",
+    "password": "*******",
     "remotePath": "/www",
     "uploadOnSave": true,
     "useTempFile": false,
